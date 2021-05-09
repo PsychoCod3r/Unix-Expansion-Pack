@@ -16,3 +16,7 @@ To install, set execute permission for all scripts and then copy them to /usr/lo
     $ cd bin
     $ chmod a+x *
     $ sudo cp * /usr/local/bin
+
+Or just run the install script:
+
+    $ source install
