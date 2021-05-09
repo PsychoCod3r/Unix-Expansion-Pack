@@ -9,7 +9,7 @@ Scripts implementing additional Unix commands and hacks
 
 `factorial`: Arbitrary precision factorial calculator - takes a positive integer of any size as its argument and computes the factorial. (Anything other than a positive integer causes an error.)
 
-`loc`: "Lines of Code" - takes a C file as input and computes how many non-comment, non-whitespace lines are in that file.
+`loc`: Lines Of Code calculator - takes a C file as its parameter and computes how many non-comment, non-whitespace lines are in that file.
 
 ----
 
