@@ -1,0 +1,10 @@
+#!/usr/bin/dc -f
+
+[ ln 1 - sn
+  ln la * sa
+  ln 1 !=f ] sf
+
+? sn
+ln sa
+lf x
+la p
