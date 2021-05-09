@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Recursive chmod
+
+function rchmod() {
+        cd "$2"
+        for file in *
+        do
+                if [[ -d "$file" ]]
+                then
+                        rchmod "$1" "$file"
+                else
+                        chmod "$1" "$file"
+                fi
+        done
+        cd ..
+        chmod "$1" "$2"
+}
+
+rchmod "$1" "$2"
