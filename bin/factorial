@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+factorial.dc << END
+$1
+END
