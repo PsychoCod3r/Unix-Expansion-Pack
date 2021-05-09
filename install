@@ -3,3 +3,4 @@
 cd bin
 chmod a+x *
 sudo cp * /usr/local/bin
+# echo "alias calendar=\"calendar-cpp\"" >> ~/.bashrc
