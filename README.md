@@ -11,6 +11,8 @@ Scripts implementing additional Unix commands and hacks
 
 `loc`: Lines Of Code calculator - takes a C file as its parameter and computes how many non-comment, non-whitespace lines are in that file.
 
+`rchmod`: Works just like the `chmod` command except it changes permissions for all files in a directory tree, including the root of that tree. This is most useful for adding permissions to files hosted on a server so you can access them remotely.
+
 ----
 
 To install, set execute permission for all scripts and then copy them to /usr/local/bin.
