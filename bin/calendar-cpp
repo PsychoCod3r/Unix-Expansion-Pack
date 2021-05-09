@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# This script is a frontend for the calendar program that adds the
+# full power of cpp to calendar.  Namely, it can do conditional
+# preprocessing and #includes based on arguments given by the -D
+# option to CPP.
+
+declare -i DAYS=10
+
+# Parse command line options:
+for arg in "$@"
+do
+        case "$arg" in
+                -W ) shift; let DAYS=$1; shift;;
+                -B ) shift; let DAYS=-$1; shift;;
+                -D ) shift; break;; # Define CPP macros
+                -* ) shift; shift;;
+        esac
+done
+
+# Debugging info:
+#echo "DAYS=$DAYS"
+#echo "\$1=$1"
+#echo "\$2=$2"
+
+# Preprocess calendar file and run it through a sed script that performs necessary edits
+cpp -D${1:-"NULL1"} -D${2:-"NULL2"} -D${3:-"NULL3"} -D${4:-"NULL4"} -I /usr/share/calendar ~/.calendar/calendar 2>/dev/null | sed -f ~/Scripts/calendar.sed >| ~/calendar.tmp
+
+
+# Print output of calendar
+if [[ $DAYS -gt 0 ]]
+then
+        # Print forward
+        command calendar -f ~/calendar.tmp -W $DAYS
+elif [[ $DAYS -lt 0 ]]
+then
+        # Print backward
+        let DAYS=-$DAYS
+        command calendar -f ~/calendar.tmp -B $DAYS
+fi
+
+# Cleanup
+rm ~/calendar.tmp
+unset arg DAYS
