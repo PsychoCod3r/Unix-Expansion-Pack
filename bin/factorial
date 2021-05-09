@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [[ $(echo "$1" | grep "[^0-9]") != "" ]]
+then
+        echo "Invalid number"
+        exit
+fi
+
 factorial.dc << END
 $1
 END
