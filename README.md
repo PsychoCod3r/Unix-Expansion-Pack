@@ -5,7 +5,9 @@ Scripts implementing additional Unix commands and hacks
 
 ## Included commands:
 
-`factorial` Arbitrary precision factorial calculator - takes a positive integer of any size as its argument and computes the factorial.
+`calendar-cpp`: Adds full CPP capabilities to the BSD `calendar` program so you can use macros with arguments and other features not normally accessible in `calendar`. You can alias the `calendar` command to this script, although the options may be somewhat different.
+
+`factorial`: Arbitrary precision factorial calculator - takes a positive integer of any size as its argument and computes the factorial.
 
 ----
 
