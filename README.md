@@ -5,7 +5,7 @@ Scripts implementing additional Unix commands and hacks
 
 ## Included commands:
 
-`factorial` Takes a positive integer of any size as a parameter and computes its factorial
+`factorial` Arbitrary precision factorial calculator - takes a positive integer of any size as its argument and computes the factorial.
 
 ----
 
