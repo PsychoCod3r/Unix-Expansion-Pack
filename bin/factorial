@@ -2,8 +2,8 @@
 
 if [[ $(echo "$1" | grep "[^0-9]") != "" ]]
 then
-        echo "Invalid number"
-        exit
+	echo "Invalid number"
+	exit
 fi
 
 factorial.dc << END
