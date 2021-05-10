@@ -23,7 +23,7 @@ done
 #echo "\$2=$2"
 
 # Preprocess calendar file and run it through a sed script that performs necessary edits
-cpp -D${1:-"NULL1"} -D${2:-"NULL2"} -D${3:-"NULL3"} -D${4:-"NULL4"} -I /usr/share/calendar ~/.calendar/calendar 2>/dev/null | sed -f ~/Scripts/calendar.sed >| ~/calendar.tmp
+cpp -D${1:-"NULL1"} -D${2:-"NULL2"} -D${3:-"NULL3"} -D${4:-"NULL4"} -I /usr/share/calendar ~/.calendar/calendar 2>/dev/null | calendar.sed >| ~/calendar.tmp
 
 
 # Print output of calendar
