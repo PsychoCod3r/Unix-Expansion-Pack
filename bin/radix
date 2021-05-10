@@ -10,9 +10,9 @@ declare -i obase=10
 while getopts ":i:o:n:" opt
 do
 	case $opt in
-	  i) let ibase=$OPTARG;;
-	  o) let obase=$OPTARG;;
-	  \?) printf "Usage: radix [-i input-base] [-o -output-base] number\nDefault for both bases is 10.\n" >&2; exit;;
+		i) let ibase=$OPTARG;;
+		o) let obase=$OPTARG;;
+		\?) printf "Usage: radix [-i input-base] [-o -output-base] number\nDefault for both bases is 10.\n" >&2; exit;;
 	esac
 done
 shift $(($OPTIND - 1))
