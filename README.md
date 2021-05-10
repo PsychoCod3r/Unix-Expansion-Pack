@@ -15,6 +15,8 @@ Scripts implementing additional Unix commands and hacks
 
 ----
 
+## Installation:
+
 To install, set execute permission for all scripts and then copy them to /usr/local/bin.
 
     $ cd bin
