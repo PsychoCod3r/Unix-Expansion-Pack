@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Converts a number from one base to another
+# The getopts portion of this script does not work in Cygwin. Don't ask me why.
+
+# Set default values:
+declare -i ibase=10
+declare -i obase=10
+
+# Set parameters:
+while getopts ":i:o:n:" opt
+do
+	case $opt in
+	  i) let ibase=$OPTARG; shift;;
+	  o) let obase=$OPTARG; shift;;
+	  \?) printf "Usage: radix [-i input-base] [-o -output-base] number\nDefault for both bases is 10.\n" >&2; exit;;
+	esac
+done
+shift $(($OPTIND - 1))
+declare -i number=$1
+
+# Convert base:
+radix.dc << END
+$ibase
+$obase
+$number
+END
