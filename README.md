@@ -17,6 +17,12 @@ Scripts implementing additional Unix commands and hacks
 
 ----
 
+## Dependencies:
+
+For `calendar-cpp` to work, the `calendar` program must be installed. `loc` is dependent on `sed` while `factorial` and `radix` are dependent on `dc`, but these two programs come preinstalled on almost every Unix/Linux system, so it shouldn't be a problem.
+
+----
+
 ## Installation:
 
 To install, set execute permission for all scripts and then copy them to /usr/local/bin.
