@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Converts a number from one base to another
-# The getopts portion of this script does not work in Cygwin. Don't ask me why.
 
 # Set default values:
 declare -i ibase=10
