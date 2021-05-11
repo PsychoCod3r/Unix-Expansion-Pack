@@ -39,4 +39,4 @@ Or just run the install script:
 
 ## Notes:
 
-Certain scripting features used by these scripts don't work on modern versions of Cygwin. I can get them to work on actual Unix/Linux systems and on old versions of Cygwin, but the current version doesn't run these scripts correctly for some reason. Features that no longer work on Cygwin include the `getopts` shell command and the branching commands in sed. So if you're a Unix person who uses Windows for convenience, consider using actual Unix/Linux to run these scripts.
+Certain scripting features used by these scripts don't work on modern versions of Cygwin. I can get them to work on actual Unix/Linux systems and on old versions of Cygwin, but the current version doesn't run these scripts correctly for some reason. Features that no longer work on Cygwin include the `getopts` shell command and the branching commands in sed. So if you're a Unix person who uses Windows for convenience, consider using actual Unix/Linux to run these scripts. Sorry for the inconvenience.
