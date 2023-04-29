@@ -17,6 +17,8 @@ Scripts implementing additional Unix commands and hacks
 
 `rchmod`: Works just like the `chmod` command except it changes permissions for all files in a directory tree, including the root of that tree. This is most useful for adding permissions to files hosted on a server so you can access them remotely.
 
+`rcmd`: Adaptation of `rchmod` to execute any command recursively on a directory tree. Can use either a Unix command or a script, and can be set to execute a command on an entire directory for each directory it traverses (e.g. `ls`) or on individual files within each directory (e.g. `chmod`). As of this update, `rchmod` is now deprecated and will probably be removed in the future.
+
 ----
 
 ## Dependencies:
