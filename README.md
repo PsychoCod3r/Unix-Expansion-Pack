@@ -19,7 +19,7 @@ Scripts implementing additional Unix commands and hacks
 
 `rcmd`: Adaptation of `rchmod` to execute any command recursively on a directory tree. Can use either a Unix command or a script, and can be set to execute a command on an entire directory for each directory it traverses (e.g. `ls`) or on individual files within each directory (e.g. `chmod`). As of this update, `rchmod` is now deprecated and will probably be removed in the future.
 
-`usleep`: I noticed that my version of Linux did not have a `usleep` command so I wrote one in C. It's a fairly simple program that just does some basic error checking on the argument and then invokes the `usleep()` function in the POSIX API.
+`usleep`: I noticed that my version of Linux did not have a `usleep` command so I wrote one in C. It's a fairly simple program that just does some basic error checking on the argument and then invokes the `usleep()` function in the POSIX API. This version of `usleep` has three possible exit codes: 0 for success, 1 for wrong number of arguments, and 2 for non-integer argument.
 
 ----
 
